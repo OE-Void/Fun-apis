@@ -1,11 +1,5 @@
-import random
-from fastapi import FastAPI
-
-
-app = FastAPI()
-
-joke = [
-  {
+ [
+ {
     "type": "general",
     "setup": "What did the fish say when it hit the wall?",
     "punchline": "Dam."
@@ -2261,8 +2255,3 @@ joke = [
     "punchline": "A crookodile!"
   }
 ]
-
-
-@app.get('/joke/api')
-def send_joke():
-    return random.choice(joke)
